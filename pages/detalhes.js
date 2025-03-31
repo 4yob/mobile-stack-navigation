@@ -1,17 +1,22 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-export default function DetailsScreen() {
+export default function DetailsScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Olá, visitante!</Text>
             <Text style={styles.text}>Você acabou de navegar para esta página.</Text>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Home")}>
+                <Text style={styles.buttonText}>VOLTAR</Text>
+            </TouchableOpacity>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
+        height: '100%',
+        width: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -26,5 +31,17 @@ const styles = StyleSheet.create({
     text: {
         color: '#CD5C5C',
         fontSize: 18,
+    },
+    button: {
+        backgroundColor: '#CD5C5C',
+        marginTop: 20,
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 5,
+    },
+    buttonText: {
+        color: '#fff',
+        fontSize: 18,
+        fontWeight: 'bold',
     },
 });

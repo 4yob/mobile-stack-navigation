@@ -5,7 +5,7 @@ export default function HomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Atividade 05 - Stack Navigation</Text>
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Details")}>
                 <Text style={styles.buttonText}>CLIQUE AQUI</Text>
             </TouchableOpacity>
         </View>
@@ -14,6 +14,8 @@ export default function HomeScreen({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
+        height: '100%',
+        width: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
