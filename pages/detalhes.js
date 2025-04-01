@@ -1,14 +1,11 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-export default function DetailsScreen({ navigation }) {
+export default function DetailsScreen() {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Olá, visitante!</Text>
             <Text style={styles.text}>Você acabou de navegar para esta página.</Text>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Home")}>
-                <Text style={styles.buttonText}>VOLTAR</Text>
-            </TouchableOpacity>
         </View>
     );
 }
